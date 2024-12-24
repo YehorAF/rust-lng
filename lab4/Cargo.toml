@@ -1,0 +1,20 @@
+[package]
+name = "lab4"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bson = { version = "2", features = ["chrono-0_4"] } # Needed for using chrono datetime in doc
+tokio = "1"
+chrono = "0.4" # Used for setting DateTimes
+serde = "1" # Used in the Map Data into Structs section
+rocket = { version = "0.5.1", features = ["json", "mtls"] }
+uuid = { version = "1.11.0", features = ["sha1"] }
+sha1 = "0.10.6"
+uuid-by-string = "3.0.1"
+dotenv = "0.15.0"
+ws = { package = "rocket_ws", version = "0.1.1" }
+
+[dependencies.mongodb]
+version = "3.1.1"
+features = ["sync"]
